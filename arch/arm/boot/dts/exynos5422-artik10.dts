@@ -11,6 +11,7 @@
 
 /dts-v1/;
 #include "exynos5422_evt0.dtsi"
+#include "simple5422.dtsi"
 
 / {
 	model = "Samsung ARTIK10 board based on EXYNOS5422";
@@ -956,7 +957,7 @@
 		#size-cells = <0>;
 		poll-interval = <100>;
 		pinctrl-names = "default";
-		pinctrl-0 = <&key_pullup>;
+		pinctrl-0 = <&key_pullup &simple &simple1>;
 
 		button@1 {
 			label = "gpio-keys: KEY_POWER";
