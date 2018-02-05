@@ -1,0 +1,36 @@
+/*
+ * SAMSUNG EXYNOS5422 SoC device tree source
+ *
+ * Copyright (c) 2018 Matheus Castello
+ *             http://www.castello.eng.br
+ *
+ * This is a simple example for test samsung,pin pinctrl subsystem
+ * Simple and Simple1 phandles are being referenced in gpio_keys node
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 as
+ * published by the Free Software Foundation.
+ */
+
+/ {
+	compatible = "samsung,exynos5422-pinctrl";
+
+	pinctrl@13400000 {
+
+		simple: gpx0-0 {
+			samsung,pins = "gpx0-0";
+			samsung,pin-function = <1>;
+			samsung,pin-pud = <0>;
+			samsung,pin-val = <1>;	
+		};
+
+		simple1: gpx0-1 {
+			samsung,pins = "gpx0-1";
+			samsung,pin-function = <1>;
+			samsung,pin-pud = <0>;
+			samsung,pin-val = <0>;
+		};
+
+	};						
+
+};
